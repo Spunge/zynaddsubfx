@@ -129,30 +129,7 @@ if (JackEnable)
     SET (DefaultOutput jack CACHE STRING
         "Default Output module: [null, alsa, oss, jack, portaudio]")
     # Override with perhaps more helpful midi backends
-    if (AlsaEnable)
-        SET (DefaultInput alsa CACHE STRING
-            "Default Input module: [null, alsa, oss, jack]")
-    elseif (OssEnable)
-        SET (DefaultInput oss CACHE STRING
-            "Default Input module: [null, alsa, oss, jack]")
-    else ()
-        SET (DefaultInput jack CACHE STRING
-            "Default Input module: [null, alsa, oss, jack]")
-    endif ()
-elseif (AlsaEnable)
-    SET (DefaultOutput alsa CACHE STRING
-        "Default Output module: [null, alsa, oss, jack, portaudio]")
-    SET (DefaultInput alsa CACHE STRING
-        "Default Input module: [null, alsa, oss, jack]")
-elseif (OssEnable)
-    SET (DefaultOutput oss CACHE STRING
-        "Default Output module: [null, alsa, oss, jack, portaudio]")
-    SET (DefaultInput oss CACHE STRING
-        "Default Input module: [null, alsa, oss, jack]")
-elseif (PaEnable)
-    SET (DefaultOutput pa CACHE STRING
-        "Default Output module: [null, alsa, oss, jack, portaudio]")
-    SET (DefaultInput null CACHE STRING
+    SET (DefaultInput jack CACHE STRING
         "Default Input module: [null, alsa, oss, jack]")
 else()
     SET (DefaultOutput null CACHE STRING
