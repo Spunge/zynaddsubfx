@@ -126,7 +126,7 @@ endif()
 
 # Give a good guess on the best Input/Output default backends
 if (JackEnable)
-    SET (DefaultOutput jack CACHE STRING
+    SET (DefaultOutput jack-multi CACHE STRING
         "Default Output module: [null, alsa, oss, jack, portaudio]")
     # Override with perhaps more helpful midi backends
     SET (DefaultInput jack CACHE STRING
